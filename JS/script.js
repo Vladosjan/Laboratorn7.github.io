@@ -21,8 +21,6 @@ firstDiv1.appendChild(mark);
 let firstDiv2 = document.createElement("input");  
 firstDiv2.style.marginLeft = "50px";  
 firstDiv2.style.marginTop = "70px"; 
-
-
  firstDiv1.appendChild(firstDiv2);
 let magic_ball = document.createElement("div"); 
 magic_ball.style.width = "850px";  
@@ -30,19 +28,14 @@ magic_ball.style.height = "850px";
 magic_ball.style.backgroundImage = "url(ball.png)";  
 magic_ball.style.marginTop = "10vh";  
 magic_ball.style.marginLeft = "5vw";  
-
 firstDiv1.appendChild(magic_ball); 
- 
-
 let random = Math.floor(Math.random() * 1);
-if(random == 0){
-
+if((firstDiv2.value == "") && (random == 0)){
+alert("Please, enter the question!");
 magic_ball.onclick = moveMents;  
-let random1 = Math.floor(Math.random() * 2);
-}if( random1 == 1){ 
+}if((firstDiv2.value != "") && (random == 1)){ 
 magic_ball.onclick = notMoveMents;  
-alert("Please, enter the question!"); 
-} 
+ } 
 function moveMents(){  
 let answers = document.createElement("label"); 
 answers.innerHTML = "Yes";  
